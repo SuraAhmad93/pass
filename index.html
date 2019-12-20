@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="than.html">
+</head>
+<body>
+<h1>Talk About your self</h1>
+   <textarea id="txt" rows ="20" cols="50" onfocus="bg(this)" oninput = "count(this)"></textarea>
+   <div id="one"></div>
+<button type="button" id="button1" style="display: none" onclick="function1()">send</button>
+
+<script type="text/javascript">
+  function bg(x){
+  x.style.background = "red";
+}
+function count(txt1){
+  var val=txt.value;
+  var foo=val.trim().split(' ');
+  var coun=foo.length;
+  document.getElementById("one").innerHTML="word : " + coun;
+  if (coun>=20) { txt1.style.background="green"
+document.getElementById("button1").style.display = 'block';}
+}
+function function1(){
+if (window.confirm("Do you really want to leave?")) { 
+  window.open("thank.html");
+}
+else {
+  document.getElementById("txt").value ="";
+  document.getElementById("one").innerHTML ="";
+}
+}
+
+</script>
+</body>
+</html>
